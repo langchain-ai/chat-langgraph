@@ -5,6 +5,7 @@ import { BranchSwitcher, CommandBar } from "./shared";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { MarkdownText } from "../markdown-text";
 import { LoadExternalComponent } from "@langchain/langgraph-sdk/react-ui/client";
+import { cn } from "@/lib/utils";
 
 function CustomComponent({
   message,
@@ -67,7 +68,12 @@ export function AssistantMessage({
             <MarkdownText>{contentString}</MarkdownText>
           </div>
         )}
-        <div className="flex gap-2 items-center mr-auto opacity-0 group-hover:opacity-100 transition-opacity">
+        <div
+          className={cn(
+            "flex gap-2 items-center mr-auto transition-opacity",
+            "opacity-0 group-focus-within:opacity-100 group-hover:opacity-100",
+          )}
+        >
           <BranchSwitcher
             branch={meta?.branch}
             branchOptions={meta?.branchOptions}

@@ -1,4 +1,12 @@
-export function LangGraphLogoSVG({ width = 20, height = 20 }) {
+export function LangGraphLogoSVG({
+  className,
+  width,
+  height,
+}: {
+  width?: number;
+  height?: number;
+  className?: string;
+}) {
   return (
     <svg
       width={width}
@@ -6,6 +14,7 @@ export function LangGraphLogoSVG({ width = 20, height = 20 }) {
       viewBox="0 0 98 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         fillRule="evenodd"

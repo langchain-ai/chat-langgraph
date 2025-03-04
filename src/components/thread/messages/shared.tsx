@@ -31,7 +31,7 @@ function ContentCopyable({
 
   return (
     <TooltipIconButton
-      onClick={(e: any) => handleCopy(e)}
+      onClick={(e) => handleCopy(e)}
       variant="ghost"
       tooltip="Copy content"
       disabled={disabled}
@@ -82,6 +82,7 @@ export function BranchSwitcher({
       <Button
         variant="ghost"
         size="icon"
+        className="size-6 p-1"
         onClick={() => {
           const prevBranch = branchOptions[index - 1];
           if (!prevBranch) return;
@@ -97,6 +98,7 @@ export function BranchSwitcher({
       <Button
         variant="ghost"
         size="icon"
+        className="size-6 p-1"
         onClick={() => {
           const nextBranch = branchOptions[index + 1];
           if (!nextBranch) return;

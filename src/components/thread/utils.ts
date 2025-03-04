@@ -1,6 +1,6 @@
-import { MessageContent } from "@langchain/core/messages";
+import type { Message } from "@langchain/langgraph-sdk";
 
-export function getContentString(content: MessageContent): string {
+export function getContentString(content: Message["content"]): string {
   if (typeof content === "string") return content;
   const texts = content
     .filter((c): c is { type: "text"; text: string } => c.type === "text")
