@@ -10,5 +10,5 @@ interface ToolCall {
 export function findToolCall<Name extends string>(name: Name) {
   return <Args extends ZodTypeAny>(
     x: ToolCall,
-  ): x is { name: Name; args: z.infer<Args> } => x.name === name;
+  ): x is { name: Name; args: z.infer<Args>; id?: string } => x.name === name;
 }

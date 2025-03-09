@@ -275,7 +275,7 @@ export default function AccommodationsList({
           type: "tool",
           tool_call_id: toolCallId,
           id: `${DO_NOT_RENDER_ID_PREFIX}${uuidv4()}`,
-          name: "trip-planner",
+          name: "book-accommodation",
           content: JSON.stringify(orderDetails),
         },
         {

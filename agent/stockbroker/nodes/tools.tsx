@@ -189,8 +189,7 @@ export async function callTools(
       buyStockToolCall.args.ticker,
     );
     ui.write("buy-stock", {
-      toolCallId:
-        message.tool_calls?.find((tc) => tc.name === "buy-stock")?.id ?? "",
+      toolCallId: buyStockToolCall.id ?? "",
       snapshot,
       quantity: buyStockToolCall.args.quantity,
     });
